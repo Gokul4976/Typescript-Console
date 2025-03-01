@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.13.5"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}

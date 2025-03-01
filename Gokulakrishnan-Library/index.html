@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="box">
+        <div class="sign">
+            <h1 onclick="signIn()" id="signInButton">Sign In</h1>
+            <h1 onclick="signUp()" id="signUpButton">Sign Up</h1>
+        </div>
+        <div id="signUp">
+            <form action="" onsubmit="signUpSubmit(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="cpassword" placeholder="Confirm Password" required>
+            <div class="gender">
+
+                <input type="radio" name="gender" id="male" value="male">Male</input>
+                <input type="radio" name="gender" id="female" value="female">Female</input>
+                <input type="radio" name="gender" id="others" value="others">Others</input>
+            </div>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <div class="departments">
+
+                <input type="radio" name="department" id="cse" value="cse">CSE</input>
+                <input type="radio" name="department" id="eee" value="eee">EEE</input>
+                <input type="radio" name="department" id="ece" value="ece">ECE</input>
+            </div>
+            <input type="submit" value="Submit" class="sub">
+            </form>
+        </div>
+        <div id="signIn">
+            <form action="" onsubmit="signInSubmit(event)">
+            <input type="email" id="email1" placeholder="Email">
+            <input type="password" id="password2" placeholder="Password">
+            <input type="submit" value="Submit" class="sub">
+        </form>
+        </div>
+    </div>
+
+    <div id="menu">
+        <ol>
+            <li onclick="home()">Home</li>
+            <li onclick="bookDetails()">Book details</li>
+            <li onclick="borrowBook()">Borrow Book</li>
+            <li onclick="borrowHistory()">Borrow History</li>
+            <li onclick="returnBook()">Return Books</li>
+            <li onclick="topup()">Recharge</li>
+            <li onclick="logout()">Log Out</li>
+        </ol>
+    </div>
+    <div id="homePage">
+        <h1 id="welcome"></h1>
+    </div>
+
+    <div id="bookDetailsPage">
+        <span id="bookAddButton"><button onclick="addBook()" id="addBook">Add book</button> </span>
+        <table id="bookDetailsTable">
+           <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Available</th>
+                <th>Action</th>
+           </tr>
+        </table>
+    </div>
+    <div id="borrowBookPage">
+        <!-- <span id="medicineAddButton"><button onclick="addMedicine()" id="addmedicine">Borrow book</button> </span> -->
+        <table id="borrowBookTable">
+           <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Available</th>
+                <th>Action</th>
+           </tr>
+        </table>
+    </div>
+
+    <div id="borrowHistoryPage">
+        <table id="borrowHistoryTable">
+            <tr>
+                 <th>Borrow ID</th>
+                 <th>Book ID</th>
+                 <th>User ID</th>
+                 <th>Borrow date</th>
+                 <th>Booking status</th>
+                 <th>Fine</th>
+                 <!-- <th>Action</th> -->
+            </tr>
+         </table>
+    </div>
+
+    <div id="returnPage">
+        <table id="returnTable">
+            <tr>
+                <th>Borrow ID</th>
+                <th>Book ID</th>
+                <th>User ID</th>
+                <th>Borrow date</th>
+                <th>Booking status</th>
+                <th>Fine</th>
+                <th>Action</th>
+            </tr>
+         </table>
+    </div>
+
+    <div id="topUpPage">
+        <h1 id="currentBalance"></h1>
+        <span id="amountInput"><input type="number" placeholder="Enter the Amount " id="amount" required>
+        <button onclick="deposit()" id="deposit">Deposit</button></span>
+    </div>
+    <div id="addEditBookForm">
+        <h1>Add/ Edit Book Details</h1>
+        <input type="text" id="bookName" placeholder="book name">
+        <input type="text" id="authorname" placeholder="author name">
+        <input type="text" id="availability" placeholder="availability">
+        <button onclick="addEditBook()">submit</button>
+    </div>
+    <script> var exports = {}; </script>
+    <script  src="./src/script.js"></script>
+</body>
+</html>
